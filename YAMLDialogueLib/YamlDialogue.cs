@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using YamlDotNet.Serialization;
 
-namespace SimpleYamlDialogue
+namespace YAMLDialogueLib
 {
     public static class YamlDialogueParser
     {
@@ -72,7 +72,7 @@ namespace SimpleYamlDialogue
             {
                 if (index < 0 || index >= _steps.Length)
                     throw new ArgumentOutOfRangeException(nameof(index),
-                        $"YAML DIALOGUE EXCEPTION: Invalid index of '{index}' on '{nameof(SimpleYamlDialogue)}'. Dialogue contains only '{_steps.Length}' steps.");
+                        $"YAML DIALOGUE EXCEPTION: Invalid index of '{index}' on '{nameof(YamlDialogue)}'. Dialogue contains only '{_steps.Length}' steps.");
 
                 else return _steps[index];
             }

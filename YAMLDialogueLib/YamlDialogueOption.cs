@@ -1,6 +1,6 @@
 ﻿using YamlDotNet.Serialization;
 
-namespace SimpleYamlDialogue
+namespace YAMLDialogueLib
 {
     /// <summary>
     /// Represents a optional choice to take during the conversation.

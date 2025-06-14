@@ -1,6 +1,6 @@
 ﻿using YamlDotNet.Serialization;
 
-namespace SimpleYamlDialogue
+namespace YAMLDialogueLib
 {
     public class YamlDialogueStep
     {

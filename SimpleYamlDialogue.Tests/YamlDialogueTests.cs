@@ -1,6 +1,7 @@
-using SimpleYamlDialogue;
+using SimpleYamlDialogue.Tests;
+using YAMLDialogueLib;
 
-namespace SimpleYamlDialogue.Tests
+namespace YamlDialogueLib.Tests
 {
     public class YamlDialogueSerializationTests
     {
