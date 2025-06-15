@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/DialogueStep"
+    },
+    "definitions": {
+        "DialogueStep": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "description": "Used to warp around the dialogue with choice options."
+                },
+                "actions": {
+                    "type": "array",
+                    "description": "Intended to represent events or special triggers during the conversation.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "actor": {
+                    "type": "string",
+                    "description": "The speaker of the line."
+                },
+                "line": {
+                    "type": "string",
+                    "description": "The text spoken."
+                },
+                "confirm_option": {
+                    "type": "integer",
+                    "description": "Used to indicate the \"yes\" cheice, when using options."
+                },
+                "cancel_option": {
+                    "type": "integer",
+                    "description": "Used to indicate the \"no\" choice, when using options."
+                },
+                "options": {
+                    "type": "array",
+                    "description": "Diferent options to choose during dialogue. May be used to warp around the conversation through labels.",
+                    "items": {
+                        "$ref": "#/definitions/Option"
+                    }
+                }
+            },
+            "required": []
+        },
+        "Option": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "text": {
+                    "type": "string",
+                    "description": "Text representing the option."
+                },
+                "target": {
+                    "type": "string",
+                    "description": "Label reference to warp when chosing the option."
+                }
+            },
+            "required": [
+                "text"
+            ]
+        }
+    }
+}

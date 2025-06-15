@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\YAMLDialogueLib\YAMLDialogueLib.csproj" />
+    <ProjectReference Include="..\YAMLDialogueLib\YamlDialogueLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>

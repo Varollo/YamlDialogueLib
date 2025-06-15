@@ -2,36 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using YamlDotNet.Serialization;
 
-namespace YAMLDialogueLib
+namespace YamlDialogueLib
 {
-    public static class YamlDialogueParser
-    {
-        private static IDeserializer _deserializer;
-
-        /// <summary>
-        /// Parses a <paramref name="dialogueStr"/> <c>string</c> into a <see cref="YamlDialogue"/> instance.
-        /// </summary>
-        /// <param name="dialogueStr"><c>string</c> containing dialogue, in YAML.</param>
-        /// <returns> Parsed <see cref="YamlDialogue"/> instance.</returns>
-        public static YamlDialogue Parse(string dialogueStr)
-        {
-            if (_deserializer == null)
-                _deserializer = InitializeDeserializer();
-
-            var wrapper = _deserializer.Deserialize<YamlDialogueStep[]>(dialogueStr);
-            return new YamlDialogue(wrapper);
-        }
-
-        private static IDeserializer InitializeDeserializer()
-        {
-            return new DeserializerBuilder()
-                .WithCaseInsensitivePropertyMatching()
-                .Build();
-        }
-    }
-
     /// <summary>
     /// Represents a dialogue file written in YAML using this library's scheema.
     /// <para>Use <see cref="YamlDialogueParser.Parse(string)"/> to parse a YAML string into an instance of YamlDialogue.</para>
@@ -120,12 +93,12 @@ namespace YAMLDialogueLib
         }
 
         /// <summary>
-        /// Moves the enumerator to the default <see cref="YamlDialogueOption"/>, on the current <see cref="YamlDialogueStep"/>.
+        /// Moves the enumerator to the "confirm" <see cref="YamlDialogueOption"/>, on the current <see cref="YamlDialogueStep"/>.
         /// </summary>
         /// <returns><inheritdoc/></returns>
-        public bool MoveToDefaultOption()
+        public bool MoveToConfirmOption()
         {
-            return MoveToOption(Current.DefaultOption);
+            return MoveToOption(Current.ConfirmOption);
         }
 
         /// <summary>

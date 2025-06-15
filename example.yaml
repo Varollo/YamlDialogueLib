@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=schema.json
+- label: "START"
+  actions: # Prince Charming turns Pinocchio's head towards him.
+  - "slap"
+  - "spin_head"
+
+- actor: "Prince Charming"
+  line: "You! You can't lie. So, tell me puppet... Where is Shrek?!"
+
+- actor: "Pinocchio"
+  line: "Well, I don't know where he's not."
+
+- actor: "Prince Charming"
+  line: "You're telling me you don't know where Shrek is?"
+  actions: # Prince Charming gets in Pinocchio's face.
+    - "lean"
+
+- actions: # Pinocchio is still a little nervous.
+    - "panic"
+
+- actor: "Pinocchio"
+  line: "It wouldn't be inaccurate to assume that I couldn't exactly not say that is or isn't almost partially incorrect."
+  actions: # Pinocchio thinks he has the upper hand.
+    - "think"
+
+- actor: "Prince Charming"
+  line: "So, you do know where he is!"
+
+- actor: "Pinocchio"
+  line: "On the contrary, I'm possibly more or less, not definitely rejecting the idea, that in no way, with any amount of uncertainty that..."
+
+- actor: "Prince Charming"
+  line: "Stop it."
+
+- actor: "Pinocchio"
+  line: "...I undeniably do or do not know where he shouldn't probably be."
+
+- actions: # Captain Hook scratches his head, even the Three Little Pigs are frustrated.
+    - "think"
+    - "face_palm"
+    - "look_away"
+    - "roll_eyes"
+
+- actor: "Pinocchio"
+  line: "If that indeed wasn't where he isn't. Even if he wasn't not were I knew he was could mean that I wouldn't completely not know where he wasn't."
+
+- actor: "Pig #1"
+  line: "Oh, enough! Shrek went off to bring back the next heir!"
+
+- actor: "Pig #1"
+  line: "Oh!"
+  actions:
+    - "cover_mouth" # The pig realizes his admission and immediately covers his mouth.
+    - "nervous_laugh" # Pinocchio laughs nervously.
+
+- actor: "Prince Charming"
+  line: "He's bringing back the next heir?"
+
+- actor: "Pinocchio"
+  line: "No!"
+
+- actions: # Pinocchio's nose grows.
+  - "grow_nose"
+
+- actor: "Prince Charming"
+  line: "Hook! Get rid of this new \"King.\""
+
+- actor: "Captain Hook"
+  line: "Right!"
+
+- actor: "Prince Charming"
+  line: "But bring Shrek to me. I have something special in mind for him."
+
+- actor: "Pinocchio"
+  line: "He'll never fall for your tricks!"
+
+- actions: # Pinocchio's nose grows again.
+  - "grow_nose"
+
+- line: "Replay? LMB = Yes | RMB = No"
+  cancel_option: 1
+  options:
+    - text: "Yes"
+      target: "START"
+    - text: "No"
+
+- line: "THE END"

@@ -1,6 +1,6 @@
 ﻿using YamlDotNet.Serialization;
 
-namespace YAMLDialogueLib
+namespace YamlDialogueLib
 {
     public class YamlDialogueStep
     {
@@ -14,9 +14,9 @@ namespace YAMLDialogueLib
         public string Label { get; internal set; }
         /// <summary> Options are possible choices to take during the conversation. </summary>
         public YamlDialogueOption[] Options { get; internal set; }
-        /// <summary> Index of the default option. Used together with <see cref="Options"/> and meant to represent an "ok" or "yes" choice. </summary>
+        /// <summary> Index of the "confirm" option. Used together with <see cref="Options"/> and meant to represent an "ok" or "yes" choice. </summary>
         [YamlMember(Alias = "default_option", ApplyNamingConventions = false)]
-        public int DefaultOption { get; internal set; }
+        public int ConfirmOption { get; internal set; }
         /// <summary> Index of the "cancel" option. Used together with <see cref="Options"/> and meant to represent an "cancel" or "no" choice.
         [YamlMember(Alias = "cancel_option", ApplyNamingConventions = false)]
         public int CancelOption { get; internal set; }

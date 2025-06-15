@@ -1,5 +1,5 @@
 using SimpleYamlDialogue.Tests;
-using YAMLDialogueLib;
+using YamlDialogueLib;
 
 namespace YamlDialogueLib.Tests
 {
@@ -63,7 +63,7 @@ namespace YamlDialogueLib.Tests
             var result = YamlDialogueParser.Parse(YAML);
 
             result.MoveNext();
-            result.MoveToDefaultOption();
+            result.MoveToConfirmOption();
             TestHelpers.Validate(() => result.Current == result[0]);
         }
 
@@ -174,7 +174,7 @@ namespace YamlDialogueLib.Tests
                 TestHelpers.Validate(() => result.Current.Actions != null, $"On step #{i}");
                 TestHelpers.Validate(() => result.Current.Label != null, $"On step #{i}");
 
-                TestHelpers.Validate(() => result.Current.DefaultOption != 0, $"On step #{i}");
+                TestHelpers.Validate(() => result.Current.ConfirmOption != 0, $"On step #{i}");
                 TestHelpers.Validate(() => result.Current.CancelOption != 0, $"On step #{i}");
 
                 for (int j = 0; j < 2; j++)
