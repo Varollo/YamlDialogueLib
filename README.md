@@ -5,7 +5,8 @@
 
  A .Net interpreter library for .yaml files to use in your games.
 
-[![GitHub Release](https://img.shields.io/github/v/release/Varollo/YamlDialogueLib)](https://github.com/Varollo/YamlDialogueLib/releases)
+[!![GitHub Release](https://img.shields.io/github/v/release/Varollo/YamlDialogueLib)
+](https://github.com/Varollo/YamlDialogueLib/releases)
 [![NuGet Version](https://img.shields.io/nuget/v/YamlDialogueLib)](https://www.nuget.org/packages/YamlDialogueLib/)
 [![License](https://img.shields.io/badge/license-MIT-lime.svg)](/LICENSE)
 
